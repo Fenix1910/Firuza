@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firuza Yakubova</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('images/bussines-card.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .intro-screen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .intro-button {
+      margin: 16px;
+      padding: 16px 32px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background-color: rgba(255, 215, 0, 0.9);
+      color: #00303f;
+      border: none;
+      border-radius: 12px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .intro-button:hover {
+      background-color: rgba(255, 215, 0, 1);
+      transform: scale(1.05);
+    }
+    .hidden {
+      display: none;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header, main {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="intro" class="intro-screen">
+    <button class="intro-button" onclick="enterSection('invitation')">Приглашение</button>
+    <button class="intro-button" onclick="enterSection('designer')">Фируза Якубова</button>
+    <button class="intro-button" onclick="enterSection('mosque')">Кук-Мечеть</button>
+  </div>
+  <header class="hidden">
+    <div class="lang-switch">
+      <a href="#" onclick="setLanguage('ru')">RU</a> | <a href="#" onclick="setLanguage('en')">EN</a>
+    </div>
+    <h1 class="title">Firuza Yakubova</h1>
+    <p class="subtitle" data-lang="invitation-sub">Арт-пространство дизайна и наследия</p>
+  </header>
+  <main class="hidden">
+    <section id="invitation" class="section">
+      <h2 data-lang="invitation">Приглашение</h2>
+      <p data-lang="invitation-text">
+        Уважаемые господа,<br>
+        С почтением приглашаем Вас на торжественное открытие арт-пространства Фирузы Якубовой, которое состоится 3 мая 2025 года в 16:00.<br>
+        Этот вечер станет уникальной возможностью погрузиться в мир вдохновения, созданный с величайшим мастерством.<br>
+        Мы будем рады разделить с Вами это культурное событие.<br>
+        Погрузитесь в мир гармонии старины, культурного наследия и современной моды.
+      </p>
+      <p><strong>Адрес:</strong> Узбекистан, Ташкент, ул. Кук-Масжид, 1</p>
+      <p><strong>Телефон:</strong> +998 90 320 14 11</p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/firuza.yakubova" target="_blank">@firuza.yakubova</a></p>
+      <audio controls>
+        <source src="audio/experience.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает воспроизведение аудио.
+      </audio>
+    </section>
+    <section id="designer" class="section">
+      <h2 data-lang="designer">Фируза Якубова</h2>
+      <p data-lang="designer-text">
+        Я очень люблю красивую одежду. В детстве мне нравилось шить для своих кукол и наряжать их. Моя бабушка научила меня шить, и в восемь лет я сшила своё первое платье. Сейчас я — дизайнер в доме моды F&G, основанном в 2015 году. Основные принципы моей работы — натуральные ткани и национальный колорит. Хочу, чтобы эту игру красок увидели все окружающие, а национальный стиль привлекал внимание к женщине. Через свои коллекции я стараюсь показать миру красоту национальных изделий Узбекистана.
+      </p>
+      <audio controls>
+        <source src="audio/porzerinamin.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает воспроизведение аудио.
+      </audio>
+      <div class="gallery">
+        <img src="images/firuza1.jpg" alt="Коллекция 1">
+        <img src="images/firuza2.jpg" alt="Коллекция 2">
+        <img src="images/firuza3.jpg" alt="Коллекция 3">
+      </div>
+    </section>
+    <section id="mosque" class="section">
+      <h2 data-lang="mosque">Кук-Мечеть — Хроники времени</h2>
+      <p data-lang="mosque-text">
+        Кук-Мечеть — архитектурный памятник XVIII века, расположенный в Ташкенте. Несмотря на перестройки, она сохраняет поэтику восточной архитектуры. Фасад украшен арками, михраб — резьбой по ганчу, купол покрыт "чешуёй" из металла. Пространство ранее использовалось как филиал швейного цеха, сейчас — культурная площадка. Требуется реставрация, но мечеть уже привлекает внимание как символ диалога между прошлым и настоящим.
+      </p>
+      <audio controls>
+        <source src="audio/kuygay.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает воспроизведение аудио.
+      </audio>
+      <div class="gallery">
+        <img src="images/mosque_old.jpg" alt="Историческое фото мечети">
+        <img src="images/mosque_new.jpg" alt="Современное фото мечети">
+        <img src="images/mosque1.jpg" alt="Кук-Мечеть 1">
+        <img src="images/mosque2.jpg" alt="Кук-Мечеть 2">
+        <img src="images/mosque3.jpg" alt="Кук-Мечеть 3">
+        <img src="images/mosque4.jpg" alt="Кук-Мечеть 4">
+        <img src="images/mosque5.jpg" alt="Кук-Мечеть 5">
+        <img src="images/mosque6.jpg" alt="Кук-Мечеть 6">
+        <img src="images/mosque7.jpg" alt="Кук-Мечеть 7">
+      </div>
+    </section>
+  </main>
+  <script>
+    function enterSection(sectionId) {
+      document.getElementById('intro').classList.add('hidden');
+      document.querySelector('header').classList.remove('hidden');
+      document.querySelector('main').classList.remove('hidden');
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
